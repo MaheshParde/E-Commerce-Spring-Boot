@@ -45,5 +45,4 @@ stage('Registring image') {
 
   }
 	
-}
    
