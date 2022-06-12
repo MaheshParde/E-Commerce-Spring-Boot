@@ -15,7 +15,7 @@ pipeline {
     disableConcurrentBuilds()  
   }
 
-  stages
+stages{
 	stage('Git') {
 		steps{
 		git 'https://github.com/MaheshParde/JAVA-Test.git'
@@ -44,3 +44,4 @@ stage('Registring image') {
 
 }
 
+}	
