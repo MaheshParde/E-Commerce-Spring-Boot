@@ -18,7 +18,7 @@ pipeline {
 stages{
 	stage('Git') {
 		steps{
-		git 'https://github.com/MaheshParde/JAVA-Test.git'
+		git 'https://github.com/MaheshParde/E-Commerce-Spring-Boot.git'
 		}	
 	}
    
