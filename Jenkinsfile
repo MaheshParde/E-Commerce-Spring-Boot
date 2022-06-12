@@ -26,7 +26,7 @@ stages{
 	stage('docker Image'){
 		steps{
 			script{
-		 	sh "docker build -t maheshparde/E-Commerce-Spring-Boot ."	
+		 	sh "docker build -t maheshparde/e-commerce-spring-boot ."	
 			}
 		}
 	}
