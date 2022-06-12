@@ -28,8 +28,8 @@ pipeline {
 			script{
 		 	sh "docker build -t maheshparde/E-Commerce-Spring-Boot ."	
 			}
-			}
 		}
+	}
 		
 stage('Registring image') {
 		steps{
@@ -42,7 +42,5 @@ stage('Registring image') {
 		}
 	}
 
+}
 
-  }
-	
-   
