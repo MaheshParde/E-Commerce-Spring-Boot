@@ -36,7 +36,7 @@ stage('Registring image') {
 			script{
 				docker.withRegistry('',registryCredential){
 				//dockerImage.push()
-				sh "docker push maheshparde/E-Commerce-Spring-Boot"
+				sh "docker push maheshparde/e-commerce-spring-boot"
 				}
 			}
 		}
