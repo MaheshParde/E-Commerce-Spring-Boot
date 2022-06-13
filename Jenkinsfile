@@ -22,6 +22,16 @@ stages{
 		}	
 	}
    
+	stage('Code Coverage') {
+        steps{
+          	script {
+                	git 'https://github.com/MaheshParde/E-Commerce-Spring-Boot.git',
+                 	echo 'Code Coverage'
+                 	jacoco()
+                    }
+                     	
+            }
+    }
 
 	stage('docker Image'){
 		steps{
