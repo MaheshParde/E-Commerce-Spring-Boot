@@ -24,6 +24,10 @@ stages{
    
 
     stage('Code Analysis') {
+	    
+	    tools{
+	    jdk "jdk11"
+	    }
       steps {
         script {
           scannerHome = tool 'SonarQubeScanner'
