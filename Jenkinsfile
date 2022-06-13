@@ -22,16 +22,19 @@ stages{
 		}	
 	}
    
-	stage('Code Coverage') {
-        steps{
-          	script {
-                	git 'https://github.com/MaheshParde/E-Commerce-Spring-Boot.git',
-                 	echo 'Code Coverage'
-                 	jacoco()
-                    }
-                     	
-            }
+
+    stage('Code Analysis') {
+      steps {
+        script {
+          scannerHome = tool 'SonarQubeScanner'
+        }
+        withSonarQubeEnv('sonarqube') {
+          git 'https://github.com/MaheshParde/E-Commerce-Spring-Boot.git'
+          sh  "mvn -Dspring.profiles.acitve=dev -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml clean verify sonar:sonar"
+        }
+      }
     }
+
 
 	stage('docker Image'){
 		steps{
